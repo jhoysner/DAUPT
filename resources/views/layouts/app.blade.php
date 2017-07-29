@@ -57,8 +57,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                       <p style="color:white;font-weight: bold; margin-left: 2em">TopService</p> 
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                       <p style="color:white;font-weight: bold; margin-left: 2em">TopService</p>
                     </a>
                 </div>
 
@@ -102,11 +102,11 @@
          <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
-                    <div class="container">    
+                    <div class="container">
                          @yield('content')
                     </div>
                 </div>
-          </div>            
+          </div>
     </div>
 
     <!-- Scripts -->

@@ -21,8 +21,9 @@
                                         <input type="text" class="form-control" name="code" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="title">Type</label>
-                                        <input type="text" class="form-control" name="type" required>
+                                        <label for="title">Type</label><br>
+                                          <input type="radio" name="type" value="1"> Venta<br>
+                                          <input type="radio" name="type" value="2"> Compra<br>
                                     </div>
                                 </div>
                                 <br>

@@ -21,8 +21,9 @@
                                         <input type="text" class="form-control" name="code" value="{{$daily->code}}" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="title">Type</label>
-                                        <input type="text" class="form-control" name="type" value="{{$daily->type}}" required>
+                                        <label for="title">Type</label><br>
+                                            <input type="radio" name="type" value="1" {{ $daily->type == '1' ? 'checked' : '' }}> Venta<br>
+                                            <input type="radio" name="type" value="2" {{ $daily->type == '2' ? 'checked' : '' }}> Compra<br>
                                     </div>
                                 </div>
                                 <br>

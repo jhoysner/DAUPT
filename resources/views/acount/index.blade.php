@@ -25,11 +25,11 @@
                              <td>{{$acount->name}}</td>
                              <td>{{$acount->description}}</td>
                              <td>
-	                            <a href="{{ route('acount.edit',$acount->id )}}" class="btn btn-info btn-xs" style="float:left;margin-right:5px"> Editar</a>
+	                            <a href="{{ route('acount.edit',$acount->id )}}" class="btn btn-info btn-xs" style="float:left;margin-right:5px"> <i class="md md-edit"></i></a>
 	                            <form action="{{ route('acount.destroy',$acount->id )}}" method="post">
 	                                <input type="hidden" name="_method" value="DELETE">
 	                                {{ csrf_field() }}
-	                                <button type="submit" class="btn btn-danger btn-xs" >Eliminar</button>
+	                                <button type="submit" class="btn btn-danger btn-xs"><i class="md md-close"></i></button>
 	                            </form>
                              </td>
                          </tr>

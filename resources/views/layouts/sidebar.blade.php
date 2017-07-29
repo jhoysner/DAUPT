@@ -6,7 +6,7 @@
             </div>
             <div class="user-info">
                 <div class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">John Doe <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{{Auth::user()->name}}<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="javascript:void(0)"><i class="md md-face-unlock"></i> Profile<div class="ripple-wrapper"></div></a></li>
                         <li><a href="javascript:void(0)"><i class="md md-settings"></i> Settings</a></li>
@@ -26,7 +26,7 @@
                 </li>
 
                 <li class="has_sub">
-                    <a href="#" class="waves-effect"><i class="md md-mail"></i><span> Users </span><span class="pull-right"></a>
+                    <a href="{{ url('user') }}" class="waves-effect"><i class="md md-account-box"></i><span> Users </span><span class="pull-right"></a>
 
                 </li>
 
@@ -35,7 +35,7 @@
                 </li>
 
                 <li class="has_sub">
-                    <a href="{{ url('acount') }}" class="waves-effect"><i class="md md-palette"></i> <span> Accounts </span> <span class="pull-right"></span></a>
+                    <a href="{{ url('acount') }}" class="waves-effect"><i class="md md-folder-shared"></i> <span> Accounts </span> <span class="pull-right"></span></a>
 
                 </li>
 

@@ -10,4 +10,7 @@ class Account extends Model
         'name', 'description',
     ];
 
+    public function daily(){
+        return $this->HasOne('App\Daily');
+    }
 }

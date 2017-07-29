@@ -28,7 +28,7 @@ class AcountTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acounts');
+        Schema::dropIfExists('accounts');
 
     }
 }

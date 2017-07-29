@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -21,5 +21,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth',])->resource('daily' , 'DailyController');
 Route::middleware(['auth',])->resource('acount' , 'AcountController');
+Route::middleware(['auth',])->resource('user' , 'UserController');
 
 
