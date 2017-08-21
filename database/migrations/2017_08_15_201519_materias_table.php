@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AcountTable extends Migration
+class MateriasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class AcountTable extends Migration
      */
     public function up()
     {
-        Schema::create('accounts', function (Blueprint $table) {
+        Schema::create('materias', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->text('description');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
@@ -28,7 +27,6 @@ class AcountTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('accounts');
-
+        Schema::dropIfExists('materias');
     }
 }

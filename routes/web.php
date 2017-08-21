@@ -19,8 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::middleware(['auth',])->resource('daily' , 'DailyController');
-Route::middleware(['auth',])->resource('acount' , 'AcountController');
+Route::middleware(['auth',])->resource('aula' , 'AulaController');
 Route::middleware(['auth',])->resource('user' , 'UserController');
+Route::middleware(['auth',])->resource('materia' , 'MateriaController');
+Route::middleware(['auth',])->resource('asignacion' , 'AsignacionController');
+Route::middleware(['auth',])->resource('equipo' , 'EquipoController');
 
 

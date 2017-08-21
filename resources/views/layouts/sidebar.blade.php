@@ -26,16 +26,18 @@
                 </li>
 
                 <li class="has_sub">
-                    <a href="{{ url('user') }}" class="waves-effect"><i class="md md-account-box"></i><span> Users </span><span class="pull-right"></a>
+                    <a href="{{ url('user') }}" class="waves-effect"><i class="md md-account-box"></i><span> Usuarios </span><span class="pull-right"></a>
 
                 </li>
 
                 <li>
-                    <a href="{{ url('daily') }}" class="waves-effect"><i class="md md-event"></i><span> Daily's </span></a>
+                    <a href="{{ url('aula') }}" class="waves-effect"><i class="md md-event"></i><span> Aulas </span></a>
                 </li>
-
+                <li>
+                    <a href="{{ url('materia') }}" class="waves-effect"><i class="md md-event"></i><span> Materias </span></a>
+                </li>
                 <li class="has_sub">
-                    <a href="{{ url('acount') }}" class="waves-effect"><i class="md md-folder-shared"></i> <span> Accounts </span> <span class="pull-right"></span></a>
+                    <a href="{{ url('equipo') }}" class="waves-effect"><i class="md md-folder-shared"></i> <span> Equipos </span> <span class="pull-right"></span></a>
 
                 </li>
 

@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Account;
-use App\Daily;
+use App\Asignacion;
+use App\Aula;
+use App\Dia;
+use App\Materia;
+use App\Tiempo;
 use Illuminate\Http\Request;
 
-class DailyController extends Controller
+class AulaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +18,8 @@ class DailyController extends Controller
      */
     public function index()
     {
-        $dailys = Daily::all();
-        return view('dailys.index', compact('dailys'));
+        $aulas = Aula::all();
+        return view('aula.index', compact('aulas'));
     }
 
     /**
@@ -26,8 +29,7 @@ class DailyController extends Controller
      */
     public function create()
     {
-        $accounts =  Account::all();
-        return view('dailys.dailyCreate', compact('accounts'));
+        return view('aula.aulaCreate');
     }
 
     /**
@@ -38,11 +40,9 @@ class DailyController extends Controller
      */
     public function store(Request $request)
     {
-
-        $daily = new Daily($request->all());
-        $daily->save();
-        return redirect()->route('daily.index');
-
+        $aula = new Aula($request->all());
+        $aula->save();
+        return redirect()->route('aula.index');
     }
 
     /**
@@ -53,7 +53,12 @@ class DailyController extends Controller
      */
     public function show($id)
     {
-        //
+        $aula = Aula::findOrFail($id);
+        $tiempos = Tiempo::all();
+        $dias = Dia::all();
+        $asignacionesAll = Asignacion::all();
+        $asignaciones = $asignacionesAll->where('aula_id','==', $aula->aula);
+        return view('aula.aulaDetail', compact('aula','tiempos','dias','asignaciones'));
     }
 
     /**
@@ -64,13 +69,14 @@ class DailyController extends Controller
      */
     public function edit($id)
     {
+        $aula = Aula::findOrFail($id);
+        $tiempos = Tiempo::all();
+        $dias = Dia::all();
+        $materias = Materia::all();
+        $asignacionesAll = Asignacion::all();
+        $asignaciones = $asignacionesAll->where('aula_id','==', $aula->aula);
 
-        $daily = Daily::findOrFail($id);
-        $accountOne = Account::findOrFail($daily->account_id);
-
-        $accounts =  Account::all();
-
-        return view('dailys.dailyEdit', compact('daily','accounts','accountOne'));
+        return view('aula.aulaEdit', compact('aula','tiempos','dias','asignaciones','materias'));
     }
 
     /**
@@ -82,11 +88,7 @@ class DailyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $daily = Daily::findOrFail($id);
-        $daily->fill($request->all());
-        $daily->save();
-
-        return redirect()->route('daily.index');
+        //
     }
 
     /**
@@ -97,8 +99,6 @@ class DailyController extends Controller
      */
     public function destroy($id)
     {
-        $daily = Daily::findOrFail($id);
-        $daily->delete();
-        return redirect()->route('daily.index');
+        //
     }
 }

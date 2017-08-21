@@ -10,7 +10,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    Welcome TopService Manager
+                    Bienvenido Distribucion UPT
                 </div>
             </div>
         </div>
