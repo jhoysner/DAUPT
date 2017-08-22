@@ -34,7 +34,7 @@
                     <a href="{{ url('aula') }}" class="waves-effect"><i class="md md-event"></i><span> Aulas </span></a>
                 </li>
                 <li>
-                    <a href="{{ url('materia') }}" class="waves-effect"><i class="md md-event"></i><span> Materias </span></a>
+                    <a href="{{ url('materia') }}" class="waves-effect"><i class="md md-book"></i><span> Materias </span></a>
                 </li>
                 <li class="has_sub">
                     <a href="{{ url('equipo') }}" class="waves-effect"><i class="md md-folder-shared"></i> <span> Equipos </span> <span class="pull-right"></span></a>

@@ -23,6 +23,7 @@ Route::middleware(['auth',])->resource('aula' , 'AulaController');
 Route::middleware(['auth',])->resource('user' , 'UserController');
 Route::middleware(['auth',])->resource('materia' , 'MateriaController');
 Route::middleware(['auth',])->resource('asignacion' , 'AsignacionController');
+Route::middleware(['auth',])->resource('equipo-asignacion' , 'EquipoAsignacionController');
 Route::middleware(['auth',])->resource('equipo' , 'EquipoController');
 
 

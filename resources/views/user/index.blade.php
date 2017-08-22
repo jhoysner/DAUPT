@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-10col-md-offset-2">
             <div class="panel panel-default">
-                <a href="{{url('user/create')}}" class="btn btn-info" style="margin:2em;">CREATE USUARIO</a>
+                <a href="{{url('user/create')}}" class="btn btn-info" style="margin:2em;">Crear Usuario</a>
 
                 <div class="panel-body">
                     <table class="table">

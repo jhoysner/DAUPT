@@ -18,7 +18,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label for="name" class="control-label">Nombre</label>
-                                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
+                                        <input id="name" type="text" class="form-control" name="nombre" value="{{ old('name') }}" required autofocus>
 
                                     </div>
                                 </div>

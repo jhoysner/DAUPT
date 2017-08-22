@@ -60,7 +60,11 @@ class MateriaController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $materia = Materia::findOrFail($id);
+
+
+        return view('materia.materiaEdit', compact('materia'));
     }
 
     /**
@@ -72,7 +76,11 @@ class MateriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $materia = Materia::findOrFail($id);
+        $materia->fill($request->all());
+        $materia->save();
+
+        return redirect()->route('materia.index');
     }
 
     /**

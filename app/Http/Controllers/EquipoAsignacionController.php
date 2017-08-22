@@ -2,16 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Asignacion;
-use App\Aula;
-use App\Dia;
-use App\Equipo;
 use App\EquipoAsignacion;
-use App\Materia;
-use App\Tiempo;
 use Illuminate\Http\Request;
 
-class AulaController extends Controller
+class EquipoAsignacionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,8 +14,7 @@ class AulaController extends Controller
      */
     public function index()
     {
-        $aulas = Aula::all();
-        return view('aula.index', compact('aulas'));
+        //
     }
 
     /**
@@ -31,7 +24,7 @@ class AulaController extends Controller
      */
     public function create()
     {
-        return view('aula.aulaCreate');
+        //
     }
 
     /**
@@ -42,9 +35,9 @@ class AulaController extends Controller
      */
     public function store(Request $request)
     {
-        $aula = new Aula($request->all());
-        $aula->save();
-        return redirect()->route('aula.index');
+        $easignacion = new EquipoAsignacion($request->all());
+        $easignacion->save();
+        return redirect()->back();
     }
 
     /**
@@ -55,16 +48,7 @@ class AulaController extends Controller
      */
     public function show($id)
     {
-        $aula = Aula::findOrFail($id);
-        $tiempos = Tiempo::all();
-        $dias = Dia::all();
-        $asignacionesAll = Asignacion::all();
-        $asignaciones = $asignacionesAll->where('aula_id','==', $aula->aula);
-        $equiposAsignacionAll = EquipoAsignacion::all();
-        $equiposAsignacion = $equiposAsignacionAll->where('aula_id','==', $aula->aula);
-
-
-        return view('aula.aulaDetail', compact('aula','tiempos','dias','asignaciones','equiposAsignacion'));
+        //
     }
 
     /**
@@ -75,18 +59,7 @@ class AulaController extends Controller
      */
     public function edit($id)
     {
-        $aula = Aula::findOrFail($id);
-        $tiempos = Tiempo::all();
-        $dias = Dia::all();
-        $materias = Materia::all();
-        $equipos = Equipo::all();
-        $asignacionesAll = Asignacion::all();
-        $asignaciones = $asignacionesAll->where('aula_id','==', $aula->aula);
-        $equiposAsignacionAll = EquipoAsignacion::all();
-        $equiposAsignacion = $equiposAsignacionAll->where('aula_id','==', $aula->aula);
-
-
-        return view('aula.aulaEdit', compact('aula','tiempos','dias','equipos','asignaciones','materias','equiposAsignacion'));
+        //
     }
 
     /**

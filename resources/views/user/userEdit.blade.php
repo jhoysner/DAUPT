@@ -32,10 +32,6 @@
                                 <br>
 
                             </div>
-                            <div class="col-md-3">
-                                <label for="password" class="control-label">Code employee</label>
-                                        <input id="code_employee" type="text" class="form-control"  value="{{$user->code_employee}}" name="code_employee" required>
-                            </div>
 
 
                         </div>

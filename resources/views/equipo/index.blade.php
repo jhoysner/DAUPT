@@ -21,7 +21,7 @@
                         @foreach($equipos as $equipo)
                          <tr>
                              <td>{{$equipo->id}}</td>
-                             <td>{{$equipo->name}}</td>
+                             <td>{{$equipo->nombre}}</td>
                              <td>
                               <a href="{{ route('equipo.edit',$equipo->id )}}" class="btn btn-info btn-xs" style="float:left;margin-right:5px"> <i class="md md-edit"></i></a>
                               <form action="{{ route('equipo.destroy',$equipo->id )}}" method="post">
